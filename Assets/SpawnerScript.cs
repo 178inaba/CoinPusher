@@ -6,6 +6,8 @@ public class SpawnerScript : MonoBehaviour {
 	float moveSpeed = 2.0f;
 	Rigidbody rb;
 
+	public GameObject coin;
+
 	// Use this for initialization
 	void Start () {
 		// get Rigidbody
@@ -22,5 +24,10 @@ public class SpawnerScript : MonoBehaviour {
 
 		// move speed decision
 		rb.velocity = direction * moveSpeed;
+
+		if (Input.GetKeyDown("space")) {
+			// create coin
+			Instantiate(coin, this.transform.position, this.transform.rotation);
+		}
 	}
 }
