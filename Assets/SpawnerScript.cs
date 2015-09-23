@@ -8,14 +8,35 @@ public class SpawnerScript : MonoBehaviour {
 
 	public GameObject coin;
 
+	// wall
+	public GameObject leftWall;
+	public GameObject rightWall;
+	float leftWallPositionX;
+	float rightWallPositionX;
+
 	// Use this for initialization
 	void Start () {
 		// get Rigidbody
 		rb = this.GetComponent<Rigidbody> ();
+
+		// get wall x position
+		leftWallPositionX = leftWall.transform.position.x;
+		rightWallPositionX = rightWall.transform.position.x;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// get now position
+		Vector3 currentPosition = this.transform.position;
+
+		// set move range min and max
+		currentPosition.x = Mathf.Clamp (currentPosition.x,
+		                                 leftWallPositionX,
+		                                 rightWallPositionX);
+
+		// set position
+		this.transform.position = currentPosition;
+
 		// input horizontal key to move
 		float x = Input.GetAxis ("Horizontal");
 
