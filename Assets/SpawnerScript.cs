@@ -14,6 +14,10 @@ public class SpawnerScript : MonoBehaviour {
 	float leftWallPositionX;
 	float rightWallPositionX;
 
+	// score
+	public GameObject scoreText;
+	ScoreScript scoreS;
+
 	// Use this for initialization
 	void Start () {
 		// get Rigidbody
@@ -22,6 +26,9 @@ public class SpawnerScript : MonoBehaviour {
 		// get wall x position
 		leftWallPositionX = leftWall.transform.position.x;
 		rightWallPositionX = rightWall.transform.position.x;
+
+		// get score script
+		scoreS = scoreText.GetComponent<ScoreScript> ();
 	}
 	
 	// Update is called once per frame
@@ -49,6 +56,8 @@ public class SpawnerScript : MonoBehaviour {
 		if (Input.GetKeyDown("space")) {
 			// create coin
 			Instantiate(coin, this.transform.position, this.transform.rotation);
+
+			scoreS.subScore(1);
 		}
 	}
 }

@@ -279,6 +279,7 @@ MonoBehaviour:
   coin: {fileID: 148480, guid: 2ba36e78f82c2467d93d6f245b31b172, type: 2}
   leftWall: {fileID: 136606, guid: 6c2cf5f46eed341be81d3d249055832d, type: 2}
   rightWall: {fileID: 111276, guid: 9f5d4875914fd421b817c43c068e9690, type: 2}
+  scoreText: {fileID: 2066963448}
 --- !u!1 &553261179
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +871,7 @@ GameObject:
   - 224: {fileID: 2066963451}
   - 222: {fileID: 2066963450}
   - 114: {fileID: 2066963449}
+  - 114: {fileID: 2066963452}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -926,3 +928,15 @@ RectTransform:
   m_AnchoredPosition: {x: -330, y: -200}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &2066963452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2066963448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d498881688403aa9cb83287b444ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initScore: 0
