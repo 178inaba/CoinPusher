@@ -6,8 +6,11 @@ public class SaucerScript : MonoBehaviour {
 	public GameObject scoreText;
 	ScoreScript scoreS;
 
+	AudioSource getSE;
+
 	void Start() {
 		scoreS = scoreText.GetComponent<ScoreScript> ();
+		getSE = this.GetComponent<AudioSource> ();
 	}
 
 	void OnCollisionEnter(Collision colObject) {
@@ -16,6 +19,9 @@ public class SaucerScript : MonoBehaviour {
 			Destroy(colObject.gameObject);
 
 			scoreS.addScore(2);
+
+			// play se
+			getSE.PlayOneShot(getSE.clip);
 		}
 	}
 }
