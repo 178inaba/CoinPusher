@@ -2,6 +2,10 @@
 
 CoinPusher is my first Unity program.
 
-## licence
+## License
 
-MIT
+[MIT](LICENSE)
+
+## Author
+
+[178inaba](https://github.com/178inaba)
