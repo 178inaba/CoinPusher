@@ -1,6 +1,6 @@
 # CoinPusher
 
-CoinPusher is a game to drop coins.
+CoinPusher is a game to drop coins.  
 This game is made with Unity.
 
 ## License
