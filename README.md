@@ -1,6 +1,6 @@
 # CoinPusher
 
-CoinPusher is my first Unity program.
+CoinPusher is a game to drop coins.
 
 ## License
 
